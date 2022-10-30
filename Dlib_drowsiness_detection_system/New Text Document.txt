@@ -1,0 +1,13 @@
+In this post we looked at the lesser known CNN based face detector from dlib and compared the output with the widely used HOG+SVM based face detector.
+
+We observed that the CNN based detector works really well for non-frontal faces at odd angles where HOG based detector struggles.
+
+Unfortunately, CNN based detector is computationally heavy and is not suitable for real-time video at the moment. If you have noticed the detector function call ( dlib.cnn_face_detection_model_v1() ) it says v1 which is version 1. Which means there is a high chance that the author might come up with the next version which is light weight and can be used for real-time applications.
+
+Let’s hope for a light weight version in the next release of dlib.
+
+
+
+
+we are taking the ratio which is described as <i>'Sum of distances of vertical landmarks divided by twice the distance between horizontal landmarks'</i>.
+<li>Now this ratio is totally dependent on your system which you may configure accordingly for the thresholds of sleeping, drowsy, active.</ul>
